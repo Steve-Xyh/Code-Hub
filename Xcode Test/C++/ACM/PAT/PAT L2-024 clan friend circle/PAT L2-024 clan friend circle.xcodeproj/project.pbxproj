@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AAD6F30F2064D4BA00CB77DE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAD6F30E2064D4BA00CB77DE /* main.cpp */; };
+		AA43ECB1206CE08B00B1AE74 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA43ECB0206CE08B00B1AE74 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		AAD6F3092064D4BA00CB77DE /* CopyFiles */ = {
+		AA43ECAB206CE08B00B1AE74 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AAD6F30B2064D4BA00CB77DE /* NOJ-DS 28 calculate PI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "NOJ-DS 28 calculate PI"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAD6F30E2064D4BA00CB77DE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		AA43ECAD206CE08B00B1AE74 /* PAT L2-024 clan friend circle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "PAT L2-024 clan friend circle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA43ECB0206CE08B00B1AE74 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AAD6F3082064D4BA00CB77DE /* Frameworks */ = {
+		AA43ECAA206CE08B00B1AE74 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,95 +38,95 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AAD6F3022064D4BA00CB77DE = {
+		AA43ECA4206CE08B00B1AE74 = {
 			isa = PBXGroup;
 			children = (
-				AAD6F30D2064D4BA00CB77DE /* NOJ-DS 28 calculate PI */,
-				AAD6F30C2064D4BA00CB77DE /* Products */,
+				AA43ECAF206CE08B00B1AE74 /* PAT L2-024 clan friend circle */,
+				AA43ECAE206CE08B00B1AE74 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AAD6F30C2064D4BA00CB77DE /* Products */ = {
+		AA43ECAE206CE08B00B1AE74 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AAD6F30B2064D4BA00CB77DE /* NOJ-DS 28 calculate PI */,
+				AA43ECAD206CE08B00B1AE74 /* PAT L2-024 clan friend circle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AAD6F30D2064D4BA00CB77DE /* NOJ-DS 28 calculate PI */ = {
+		AA43ECAF206CE08B00B1AE74 /* PAT L2-024 clan friend circle */ = {
 			isa = PBXGroup;
 			children = (
-				AAD6F30E2064D4BA00CB77DE /* main.cpp */,
+				AA43ECB0206CE08B00B1AE74 /* main.cpp */,
 			);
-			path = "NOJ-DS 28 calculate PI";
+			path = "PAT L2-024 clan friend circle";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AAD6F30A2064D4BA00CB77DE /* NOJ-DS 28 calculate PI */ = {
+		AA43ECAC206CE08B00B1AE74 /* PAT L2-024 clan friend circle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AAD6F3122064D4BA00CB77DE /* Build configuration list for PBXNativeTarget "NOJ-DS 28 calculate PI" */;
+			buildConfigurationList = AA43ECB4206CE08B00B1AE74 /* Build configuration list for PBXNativeTarget "PAT L2-024 clan friend circle" */;
 			buildPhases = (
-				AAD6F3072064D4BA00CB77DE /* Sources */,
-				AAD6F3082064D4BA00CB77DE /* Frameworks */,
-				AAD6F3092064D4BA00CB77DE /* CopyFiles */,
+				AA43ECA9206CE08B00B1AE74 /* Sources */,
+				AA43ECAA206CE08B00B1AE74 /* Frameworks */,
+				AA43ECAB206CE08B00B1AE74 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "NOJ-DS 28 calculate PI";
-			productName = "NOJ-DS 28 calculate PI";
-			productReference = AAD6F30B2064D4BA00CB77DE /* NOJ-DS 28 calculate PI */;
+			name = "PAT L2-024 clan friend circle";
+			productName = "PAT L2-024 clan friend circle";
+			productReference = AA43ECAD206CE08B00B1AE74 /* PAT L2-024 clan friend circle */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AAD6F3032064D4BA00CB77DE /* Project object */ = {
+		AA43ECA5206CE08B00B1AE74 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Steve X";
 				TargetAttributes = {
-					AAD6F30A2064D4BA00CB77DE = {
+					AA43ECAC206CE08B00B1AE74 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = AAD6F3062064D4BA00CB77DE /* Build configuration list for PBXProject "NOJ-DS 28 calculate PI" */;
+			buildConfigurationList = AA43ECA8206CE08B00B1AE74 /* Build configuration list for PBXProject "PAT L2-024 clan friend circle" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = AAD6F3022064D4BA00CB77DE;
-			productRefGroup = AAD6F30C2064D4BA00CB77DE /* Products */;
+			mainGroup = AA43ECA4206CE08B00B1AE74;
+			productRefGroup = AA43ECAE206CE08B00B1AE74 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AAD6F30A2064D4BA00CB77DE /* NOJ-DS 28 calculate PI */,
+				AA43ECAC206CE08B00B1AE74 /* PAT L2-024 clan friend circle */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AAD6F3072064D4BA00CB77DE /* Sources */ = {
+		AA43ECA9206CE08B00B1AE74 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAD6F30F2064D4BA00CB77DE /* main.cpp in Sources */,
+				AA43ECB1206CE08B00B1AE74 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		AAD6F3102064D4BA00CB77DE /* Debug */ = {
+		AA43ECB2206CE08B00B1AE74 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -181,7 +181,7 @@
 			};
 			name = Debug;
 		};
-		AAD6F3112064D4BA00CB77DE /* Release */ = {
+		AA43ECB3206CE08B00B1AE74 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -229,7 +229,7 @@
 			};
 			name = Release;
 		};
-		AAD6F3132064D4BA00CB77DE /* Debug */ = {
+		AA43ECB5206CE08B00B1AE74 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -237,7 +237,7 @@
 			};
 			name = Debug;
 		};
-		AAD6F3142064D4BA00CB77DE /* Release */ = {
+		AA43ECB6206CE08B00B1AE74 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -248,25 +248,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AAD6F3062064D4BA00CB77DE /* Build configuration list for PBXProject "NOJ-DS 28 calculate PI" */ = {
+		AA43ECA8206CE08B00B1AE74 /* Build configuration list for PBXProject "PAT L2-024 clan friend circle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AAD6F3102064D4BA00CB77DE /* Debug */,
-				AAD6F3112064D4BA00CB77DE /* Release */,
+				AA43ECB2206CE08B00B1AE74 /* Debug */,
+				AA43ECB3206CE08B00B1AE74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AAD6F3122064D4BA00CB77DE /* Build configuration list for PBXNativeTarget "NOJ-DS 28 calculate PI" */ = {
+		AA43ECB4206CE08B00B1AE74 /* Build configuration list for PBXNativeTarget "PAT L2-024 clan friend circle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AAD6F3132064D4BA00CB77DE /* Debug */,
-				AAD6F3142064D4BA00CB77DE /* Release */,
+				AA43ECB5206CE08B00B1AE74 /* Debug */,
+				AA43ECB6206CE08B00B1AE74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AAD6F3032064D4BA00CB77DE /* Project object */;
+	rootObject = AA43ECA5206CE08B00B1AE74 /* Project object */;
 }

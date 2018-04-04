@@ -16,16 +16,16 @@ int main()
     int n,m;
     int a[N],b[N],c[2*N];
     cin>>n;
-    for(int i=0;i<n;i++){
+    for(int i=0;i<n;i++){   //输入a[N]
         cin>>a[i];
         c[i]=a[i];
     }
     cin>>m;
-    for(int i=0;i<m;i++){
+    for(int i=0;i<m;i++){   //输入b[N]
         cin>>b[i];
         c[i+n]=b[i];
     }
-    sort(c,c+m+n);
+    sort(c,c+m+n);          //排序
     for(int i=0;i<m+n;i++)cout<<c[i]<<endl;
     return 0;
 }

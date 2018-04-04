@@ -1,7 +1,7 @@
 //  HDU-1878 欧拉回路
 //  main.cpp
 //  HDU-1878 Euler Circuit
-//
+//  https://vjudge.net/contest/217087#problem/A
 //  Created by Steve X on 2018/3/23.
 //  Copyright © 2018年 Steve X. All rights reserved.
 //  并查集union-find sets

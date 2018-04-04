@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:NOJ-DS 28 calculate PI.xcodeproj">
+      location = "self:PAT L2-024 clan friend circle.xcodeproj">
    </FileRef>
 </Workspace>
