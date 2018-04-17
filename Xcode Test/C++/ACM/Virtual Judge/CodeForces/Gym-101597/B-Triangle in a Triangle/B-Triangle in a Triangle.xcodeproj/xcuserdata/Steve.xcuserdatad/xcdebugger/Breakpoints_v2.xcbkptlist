@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "93"
             endingLineNumber = "93"
-            landmarkName = "main()"
+            landmarkName = "CalMaxS(int sum)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -31,7 +31,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "95"
             endingLineNumber = "95"
-            landmarkName = "main()"
+            landmarkName = "CalMaxS(int sum)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
