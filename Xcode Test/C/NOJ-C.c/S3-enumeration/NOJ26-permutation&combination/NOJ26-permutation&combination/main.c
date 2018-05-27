@@ -1,4 +1,4 @@
-//
+//  危险的组合
 //  main.c
 //  NOJ26-permutation&combination
 //

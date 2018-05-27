@@ -15,17 +15,46 @@ typedef int ElemType;
 typedef struct{
     int i,j;            //行号和列号
     ElemType elem;      //元素值
-}Triple;
+}Triple;                //三元组
 
+bool cmp(Triple a,Triple b)
+{
+    return a.i<b.i||(a.i==b.i&&a.j<b.j);
+}
+
+int main()
+{
+    int i,j,x,cnt=0;
+    Triple a[MaxSize];
+    cin>>i>>j;
+    while(cin>>i>>j>>x&&(i||j||x)){
+        a[cnt].i=j;
+        a[cnt].j=i;
+        a[cnt++].elem=x;
+    }
+    sort(a,a+cnt,cmp);
+    for(int i=0;i<cnt;i++)cout<<a[i].i<<" "<<a[i].j<<" "<<a[i].elem<<endl;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 typedef struct{
     Triple data[MaxSize];
     int m,n,t;          //行数,列数和非零元个数
 }TSMatrix;
-/*
-bool cmp(Triple a,Triple b)
-{
-    return a.i<b.i||(a.i==b.i&&a.j<=b.j);
-}*/
 
 void CinMatrix(TSMatrix &M)
 {                       //输入稀疏矩阵
@@ -39,19 +68,6 @@ void CinMatrix(TSMatrix &M)
         M.t++;
     }
 }
-/*
-void TransSMatrix(TSMatrix &M)
-{                       //转置,交换行,列号
-    for(int i=0;i<M.t;i++){
-        M.data[i].i^=M.data[i].j;
-        M.data[i].j^=M.data[i].i;
-        M.data[i].i^=M.data[i].j;
-    }
-    sort(M.data,M.data+M.t,cmp);
-    M.m^=M.n;
-    M.n^=M.m;
-    M.m^=M.n;
-}*/
 
 int num[MaxSize],cpot[MaxSize];
 TSMatrix FastTransposeSMatrix(TSMatrix M)
@@ -78,7 +94,25 @@ void DispSMatrix(TSMatrix M)
 {                       //输出稀疏矩阵
     for(int i=0;i<M.t;i++)cout<<M.data[i].i<<" "<<M.data[i].j<<" "<<M.data[i].elem<<endl;
 }
-/*
+
+bool cmp(Triple a,Triple b)
+{
+    return a.i<b.i||(a.i==b.i&&a.j<=b.j);
+}
+
+void TransSMatrix(TSMatrix &M)
+{                       //转置,交换行,列号
+    for(int i=0;i<M.t;i++){
+        M.data[i].i^=M.data[i].j;
+        M.data[i].j^=M.data[i].i;
+        M.data[i].i^=M.data[i].j;
+    }
+    sort(M.data,M.data+M.t,cmp);
+    M.m^=M.n;
+    M.n^=M.m;
+    M.m^=M.n;
+}
+
 void DispMatrix(TSMatrix M)
 {                       //输出完整矩阵
     int t=0;
@@ -93,7 +127,7 @@ void DispMatrix(TSMatrix M)
         }
         cout<<endl;
     }
-}*/
+}
 
 int main()
 {
@@ -105,4 +139,4 @@ int main()
     DispSMatrix(T);
     //DispMatrix(T);
     return 0;
-}
+}*/

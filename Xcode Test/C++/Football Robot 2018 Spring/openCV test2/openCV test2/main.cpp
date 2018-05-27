@@ -5,7 +5,7 @@
 //  Created by Steve X on 2018/3/4.
 //  Copyright © 2018年 Steve X. All rights reserved.
 //
-
+#include <dns.h>
 #include "opencv2/core.hpp"
 #include "opencv2/imgproc.hpp"
 #include "opencv2/highgui.hpp"
