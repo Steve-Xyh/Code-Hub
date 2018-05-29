@@ -7,127 +7,100 @@
 //
 
 #include <iostream>
-#define MAXINT 0x3f3f3f
-#define MAXNODE 100
-#define MAXNUM 50
-#define MaxLen 100
+#include <string>
+
 using namespace std;
 
-struct HtNode           //哈夫曼树结点的结构
-{
-    int weight;
-    int parent,lchild,rchild;
-};
+typedef struct Tree{
+    int w;
+    char c;
+    Tree *lt,*rt,*pre;
+    Tree(int w=0,char c=0):w(w),c(c),lt(NULL),rt(NULL),pre(NULL){}
+}*PTree;
 
-typedef struct HtTree
-{
-    HtNode ht[MAXNODE];
-    int root;           //哈夫曼树根在数组中的位置
-}HtTree,*PHtTree;
+PTree t[110],dt[110],root;
+int ww[110],n,cnt;
+char cc[110];
 
-typedef struct {
-    int weight;
-    int parent,lchild,rchild;
-} HTNode, *HuffmanTree;
-typedef char  ** HuffmanCode;
-
-void Select (PHtTree pht, int pos, int &x1, int &x2)
-{
-    int  m1 = MAXINT, m2 = MAXINT;     /* 相关变量赋初值 */
-    for (int j=1; j<pos; j++) {/* 找两个最小权的无父结点的结点 */
-        if (pht->ht[j].weight<m1 && pht->ht[j].parent == 0) {
-            m2 = m1;
-            x2 = x1;
-            m1 = pht->ht[j].weight;
-            x1 = j;
+void buildTree(){                                           //建树
+    while (1){
+        if (n == 0) break;
+        
+        int min1 = 2e9, pos1 = -1;
+        for (int i = 0; i <= n; ++i)if(t[i] && min1 > t[i] -> w){
+            min1 = t[i] -> w; pos1 = i;                     //找最小权值结点作为左子树
         }
-        else if (pht->ht[j].weight<m2 && pht->ht[j].parent == 0) {
-            m2 = pht->ht[j].weight;
-            x2 = j;
+        
+        int min2 = 2e9, pos2 = -1;
+        for (int i=0;i<=n;++i)if(t[i]&&min2>t[i]->w)if(i!=pos1){
+            min2 = t[i] -> w; pos2 = i;                     //找次小权值结点作为右子树
+        }
+        
+        Tree *tmp = new Tree(t[pos1] -> w + t[pos2] -> w);  //tmp结点为左右子树之和
+        tmp -> lt = t[pos1]; tmp -> rt= t[pos2];
+        t[pos1] -> pre = tmp; t[pos2]->pre=tmp;             //将tmp设为左右子树的父结点
+        dt[cnt++] = t[pos1]; dt[cnt++] = t[pos2];
+        
+        int fir = pos1 > pos2 ? pos1 : pos2;                //删除最小&次小结点
+        int sec = pos1 + pos2 - fir;
+        for (int i = fir; i <= n; ++i) t[i] = t[i + 1];
+        for (int i = sec; i <= n; ++i) t[i] = t[i + 1];
+        t[--n] = tmp;
+    }
+    root = t[0];
+}
+
+string getCode(string str) {                                //编码
+    string ret = "";
+    for (unsigned i = 0; i < str.length(); ++i) {
+        string tmp = "";
+        Tree *now = NULL;
+        for (int j = 0; j < cnt; ++j)if (dt[j] -> c == str[i]) {
+            now = dt[j];
+            break;
+        }
+        while (now && now -> pre) {
+            if (now == now -> pre -> lt) tmp += '0';        //左子树编为0
+            else if (now == now -> pre -> rt) tmp += '1';   //右子树编为1
+            now = now -> pre;
+        }
+        for (int j = (int)tmp.length() - 1; j >= 0; --j) ret += tmp[j];
+    }
+    return ret;
+}
+
+string getMessage(string code){                             //译码
+    string ret = "";
+    for (unsigned i = 0; i < code.length(); ) {
+        Tree *now = root;
+        while (1) {
+            if (code[i] == '0') {
+                if (now -> lt == NULL) {
+                    ret += now -> c;                        //编码为0,取左子树字符
+                    break;
+                } else now = now -> lt;
+            } else {
+                if (now -> rt == NULL) {
+                    ret += now -> c;                        //编码为1,取右子树字符
+                    break;
+                } else now = now -> rt;
+            }
+            ++i;
         }
     }
+    return ret;
 }
 
-PHtTree huffman (int n, int *w)
-/* 构造具有n个叶结点的哈夫曼树*/
-/* 数组w[1…n]中存放n个权值 */
-{
-    PHtTree  pht;
-    int i,j,x1,x2,m1,m2;
-    pht=(PHtTree) malloc (sizeof (struct HtTree));    /* 创建空哈夫曼树 */
-    assert(pht);
-    for( i=1; i<=2*n - 1; i++ ) {     /* 置初态 */
-        pht->ht[i].lchild = 0;
-        pht->ht[i].rchild = 0;
-        pht->ht[i].parent = 0;
-        if (i<=n)
-            pht->ht[i].weight = w[i];
-        else
-            pht->ht[i].weight = 0;
+int main() {
+    cin >> n;--n;
+    for (int i = 0; i <= n; ++i) cin >> cc[i];
+    for (int i = 0; i <= n; ++i) {
+        cin >> ww[i];
+        t[i] = new Tree(ww[i], cc[i]);
     }
-    /* 每循环一次构造一个内部结点 */
-    for( i=1; i < n ; i++ ) {
-        Select(pht,n+i,x1,x2);
-        pht->ht[x1].parent = n + i;    /* 构造一个内部结点 */
-        pht->ht[x2].parent = n + i;
-        pht->ht[n+i].weight = pht->ht[x1].weight + pht->ht[x2].weight;
-        pht->ht[n+i].lchild = x1;
-        pht->ht[n+i].rchild = x2;
-        pht->root = n+i;
-    }
-    return pht;
-}
-
-void TraverseHuffman (PHtTree T, char** HC, int n)
-{
-    static int codeLen = 0;        /* 为什么使用静态变量? */
-    static char cd[MaxLen];
-    if(!T)return;
-    if(T->ht[n].rchild==0) {     /* Why ? */
-        cd[codeLen] = '\0';
-        strcpy(HC[n], cd);
-    }else{
-        cd[codeLen++] = '0';
-        TraverseHuffman (T, HC, T->ht[n].lchild);
-        codeLen--;
-        cd[codeLen++]  =  '1';
-        TraverseHuffman (T, HC, T->ht[n].rchild);
-        codeLen--;
-    }
-}
-
-void HuffmanCoding(HuffmanTree &HT,HuffmanCode &HC,int &w,int n)
-{
-    int i,m=2*n-1;
-    HuffmanTree p=HT;
-    if(n<=1)return;
-    HT=(HuffmanTree)malloc((m+1)*sizeof(HTNode));
-    for(i=1;i<=n;++i,++p,++w) *p={w, 0, 0, 0};
-    for(;i<=m; ++i, ++p)*p={0,0,0,0};
-    for(i=n+1;i<=m; ++i){
-        Select(HT,i-1,s1,s2);
-        HT[s1].parent=i;HT[s2].parent=i;
-        HT[i].lchild=s1;HT[i].rchild=s2;
-        HT[i].weight=HT[s1].weight+HT[s2].weight;
-    }
-    HC=(HuffmanCode)malloc((n+1)*sizeof(char));
-    char *cd=(char *)malloc(n*sizeof(char));
-    cd[n-1]='\0';
-    for (i=1; i<=n; ++i) {
-        int start = n-1;
-        for(int c=i,f=HT[i].parent;f!=0;c=f,f=HT[f].parent){
-            if (HT[f].lchild == c)cd[--start]='0';
-            else cd[--start]='1';
-        }
-        HC[i]=(char *)malloc((n-start)*sizeof(char));
-        strcpt (HC[i], &cd[start]);
-    }
-    free(cd);
-}
-
-
-int main()
-{
-    
-    return 0;
+    buildTree();
+    string str; cin >> str;
+    string ans = getCode(str);
+    cout << ans << endl;
+    cout << getMessage(ans) << endl;
 }

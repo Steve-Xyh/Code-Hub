@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "fin(int):main.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "fin">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "main:main.cpp">
          <PersistentStrings>
             <PersistentString
@@ -15,6 +23,9 @@
                value = "sum">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MrgNode(int, int, int):main.cpp">
       </ContextState>
    </ContextStates>
 </VariablesViewState>
