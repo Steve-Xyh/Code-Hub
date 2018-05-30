@@ -1,4 +1,4 @@
-//  求广义表深度(严5.30)
+//  求广义表深度(严5.30)   ##special##
 //  main.cpp
 //  NOJ-DS 14 General List Depth
 //
