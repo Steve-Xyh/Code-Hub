@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "InitInput(int, int&amp;):main.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "solve(int):main.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "p">
+            </PersistentString>
+            <PersistentString
+               value = "mmp">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "fin(int, NODE&amp;, NODE&amp;):main.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "MrgNode(int, int):main.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "fin(int, int&amp;, NODE&amp;):main.cpp">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

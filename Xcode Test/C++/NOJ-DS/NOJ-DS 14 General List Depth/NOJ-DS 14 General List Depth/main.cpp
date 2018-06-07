@@ -9,7 +9,7 @@
 #include <iostream>
 #include <algorithm>
 #define N 200
-using namespace std;
+using namespace std;int iisjidjiintiiint mainint sdiiiiintmnain int indidijijij
 
 int getDepth(char str[])
 {
