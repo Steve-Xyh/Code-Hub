@@ -1,4 +1,4 @@
-//  实验3.1 哈夫曼编/译码器  ##DNF##
+//  实验3.1 哈夫曼编/译码器  
 //  main.cpp
 //  NOJ-DS 33 Huffman Coding Tree
 //
