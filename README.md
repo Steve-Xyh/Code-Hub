@@ -1,6 +1,7 @@
 # Code-Hub
 > Steve X
-stevexyh@hotmail.com
+
+> stevexyh@hotmail.com
 ---
 - This is a repository for my testing code.
 - Not a formal project.
