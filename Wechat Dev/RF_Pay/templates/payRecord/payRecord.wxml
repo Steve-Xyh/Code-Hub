@@ -1,0 +1,8 @@
+<template name='payRecord'>
+  <view class='record'>
+    <text class='account'>{{account}}\t</text>
+    <text class='value'>\t {{value}}</text>
+    <view class='time'>{{time}}</view>
+    <text class='payMethods'>{{payMethods}}</text>
+  </view>
+</template>

@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/First_STM32_test.dir/Basic/delay/delay.c.o"
+  "CMakeFiles/First_STM32_test.dir/Basic/rtc/rtc.c.o"
+  "CMakeFiles/First_STM32_test.dir/Basic/sys/sys.c.o"
+  "CMakeFiles/First_STM32_test.dir/Basic/usart/usart.c.o"
+  "CMakeFiles/First_STM32_test.dir/CMSIS/system_stm32f10x.c.o"
+  "CMakeFiles/First_STM32_test.dir/Hardware/KEY/key.c.o"
+  "CMakeFiles/First_STM32_test.dir/Hardware/LED/led.c.o"
+  "CMakeFiles/First_STM32_test.dir/Lib/src/misc.c.o"
+  "CMakeFiles/First_STM32_test.dir/Lib/src/stm32f10x_adc.c.o"
+  "CMakeFiles/First_STM32_test.dir/Lib/src/stm32f10x_bkp.c.o"
+  "CMakeFiles/First_STM32_test.dir/Lib/src/stm32f10x_can.c.o"
+  "CMakeFiles/First_STM32_test.dir/Lib/src/stm32f10x_cec.c.o"
+  "CMakeFiles/First_STM32_test.dir/Lib/src/stm32f10x_crc.c.o"
+  "CMakeFiles/First_STM32_test.dir/Lib/src/stm32f10x_dac.c.o"
+  "CMakeFiles/First_STM32_test.dir/Lib/src/stm32f10x_dbgmcu.c.o"
+  "CMakeFiles/First_STM32_test.dir/Lib/src/stm32f10x_dma.c.o"
+  "CMakeFiles/First_STM32_test.dir/Lib/src/stm32f10x_exti.c.o"
+  "CMakeFiles/First_STM32_test.dir/Lib/src/stm32f10x_flash.c.o"
+  "CMakeFiles/First_STM32_test.dir/Lib/src/stm32f10x_fsmc.c.o"
+  "CMakeFiles/First_STM32_test.dir/Lib/src/stm32f10x_gpio.c.o"
+  "CMakeFiles/First_STM32_test.dir/Lib/src/stm32f10x_i2c.c.o"
+  "CMakeFiles/First_STM32_test.dir/Lib/src/stm32f10x_iwdg.c.o"
+  "CMakeFiles/First_STM32_test.dir/Lib/src/stm32f10x_pwr.c.o"
+  "CMakeFiles/First_STM32_test.dir/Lib/src/stm32f10x_rcc.c.o"
+  "CMakeFiles/First_STM32_test.dir/Lib/src/stm32f10x_rtc.c.o"
+  "CMakeFiles/First_STM32_test.dir/Lib/src/stm32f10x_sdio.c.o"
+  "CMakeFiles/First_STM32_test.dir/Lib/src/stm32f10x_spi.c.o"
+  "CMakeFiles/First_STM32_test.dir/Lib/src/stm32f10x_tim.c.o"
+  "CMakeFiles/First_STM32_test.dir/Lib/src/stm32f10x_usart.c.o"
+  "CMakeFiles/First_STM32_test.dir/Lib/src/stm32f10x_wwdg.c.o"
+  "CMakeFiles/First_STM32_test.dir/User/main.c.o"
+  "CMakeFiles/First_STM32_test.dir/User/stm32f10x_it.c.o"
+  "First_STM32_test.pdb"
+  "First_STM32_test"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/First_STM32_test.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

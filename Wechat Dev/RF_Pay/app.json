@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/homepage/homepage",
+    "pages/datapage/datapage",
+    "pages/mine/mine",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#66cccc",
+    "navigationBarTitleText": "瑞收银",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#66cccc",
+    "backgroundColor": "#fff",
+
+    "list": [
+      {
+        "pagePath": "pages/homepage/homepage",
+        "text": "首页",
+        "iconPath": "/images/icons/tabbar1.png",
+        "selectedIconPath": "/images/icons/tabbar1_selected.png"
+      },
+      {
+        "pagePath": "pages/datapage/datapage",
+        "text": "数据",
+        "iconPath": "/images/icons/tabbar2.png",
+        "selectedIconPath": "/images/icons/tabbar2_selected.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/images/icons/tabbar3.png",
+        "selectedIconPath": "/images/icons/tabbar3_selected.png"
+      }
+    ]
+  }
+}

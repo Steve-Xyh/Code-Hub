@@ -1,0 +1,3 @@
+/* pages/datapage/datapage.wxss */
+
+@import "../../templates/payRecord/payRecord.wxss"

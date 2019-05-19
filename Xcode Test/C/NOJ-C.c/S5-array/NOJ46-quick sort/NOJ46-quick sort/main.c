@@ -5,7 +5,7 @@
 //  Created by Steve X on 2017/10/29.
 //  Copyright © 2017年 Steve X. All rights reserved.
 //
-
+//  快速排序
 #include <stdio.h>
 
 void QuickSort(int A[],int s,int m)  //插入排序,A[s]开始m个元素,s为左边界

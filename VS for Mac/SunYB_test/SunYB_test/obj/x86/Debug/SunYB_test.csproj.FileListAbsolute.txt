@@ -1,6 +1,0 @@
-/Users/apple/Desktop/TEST/Code-Hub/VS for Mac/SunYB_test/SunYB_test/bin/Debug/SunYB_test.exe
-/Users/apple/Desktop/TEST/Code-Hub/VS for Mac/SunYB_test/SunYB_test/bin/Debug/SunYB_test.pdb
-/Users/apple/Desktop/TEST/Code-Hub/VS for Mac/SunYB_test/SunYB_test/obj/x86/Debug/SunYB_test.csprojResolveAssemblyReference.cache
-/Users/apple/Desktop/TEST/Code-Hub/VS for Mac/SunYB_test/SunYB_test/obj/x86/Debug/SunYB_test.csproj.CoreCompileInputs.cache
-/Users/apple/Desktop/TEST/Code-Hub/VS for Mac/SunYB_test/SunYB_test/obj/x86/Debug/SunYB_test.exe
-/Users/apple/Desktop/TEST/Code-Hub/VS for Mac/SunYB_test/SunYB_test/obj/x86/Debug/SunYB_test.pdb

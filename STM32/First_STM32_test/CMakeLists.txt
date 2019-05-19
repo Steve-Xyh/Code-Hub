@@ -1,0 +1,95 @@
+cmake_minimum_required(VERSION 3.13)
+project(First_STM32_test C)
+
+set(CMAKE_C_STANDARD 11)
+
+# specify the cross compiler
+set (CMAKE_ASM_COMPILER arm-none-eabi-as)
+SET(CMAKE_C_COMPILER_WORKS 1)
+SET(CMAKE_C_COMPILER arm-none-eabi-gcc)
+SET(CMAKE_CXX_COMPILER_WORKS 1)
+SET(CMAKE_CXX_COMPILER arm-none-eabi-g++)
+set(AS arm-none-eabi-as)
+set(AR arm-none-eabi-ar)
+set(OBJCOPY arm-none-eabi-objcopy)
+set(OBJDUMP arm-none-eabi-objdump)
+set(SIZE arm-none-eabi-size)
+ENABLE_LANGUAGE(ASM)
+
+
+include_directories(Basic/delay)
+include_directories(Basic/rtc)
+include_directories(Basic/sys)
+include_directories(Basic/usart)
+include_directories(CMSIS)
+include_directories(Hardware/KEY)
+include_directories(Hardware/LED)
+include_directories(Lib/inc)
+include_directories(User)
+
+add_executable(First_STM32_test
+        Basic/delay/delay.c
+        Basic/delay/delay.h
+        Basic/rtc/rtc.c
+        Basic/rtc/rtc.h
+        Basic/sys/sys.c
+        Basic/sys/sys.h
+        Basic/usart/usart.c
+        Basic/usart/usart.h
+        CMSIS/stm32f10x.h
+        CMSIS/system_stm32f10x.c
+        CMSIS/system_stm32f10x.h
+        Hardware/KEY/key.c
+        Hardware/KEY/key.h
+        Hardware/LED/led.c
+        Hardware/LED/led.h
+        Lib/inc/misc.h
+        Lib/inc/stm32f10x_adc.h
+        Lib/inc/stm32f10x_bkp.h
+        Lib/inc/stm32f10x_can.h
+        Lib/inc/stm32f10x_cec.h
+        Lib/inc/stm32f10x_crc.h
+        Lib/inc/stm32f10x_dac.h
+        Lib/inc/stm32f10x_dbgmcu.h
+        Lib/inc/stm32f10x_dma.h
+        Lib/inc/stm32f10x_exti.h
+        Lib/inc/stm32f10x_flash.h
+        Lib/inc/stm32f10x_fsmc.h
+        Lib/inc/stm32f10x_gpio.h
+        Lib/inc/stm32f10x_i2c.h
+        Lib/inc/stm32f10x_iwdg.h
+        Lib/inc/stm32f10x_pwr.h
+        Lib/inc/stm32f10x_rcc.h
+        Lib/inc/stm32f10x_rtc.h
+        Lib/inc/stm32f10x_sdio.h
+        Lib/inc/stm32f10x_spi.h
+        Lib/inc/stm32f10x_tim.h
+        Lib/inc/stm32f10x_usart.h
+        Lib/inc/stm32f10x_wwdg.h
+        Lib/src/misc.c
+        Lib/src/stm32f10x_adc.c
+        Lib/src/stm32f10x_bkp.c
+        Lib/src/stm32f10x_can.c
+        Lib/src/stm32f10x_cec.c
+        Lib/src/stm32f10x_crc.c
+        Lib/src/stm32f10x_dac.c
+        Lib/src/stm32f10x_dbgmcu.c
+        Lib/src/stm32f10x_dma.c
+        Lib/src/stm32f10x_exti.c
+        Lib/src/stm32f10x_flash.c
+        Lib/src/stm32f10x_fsmc.c
+        Lib/src/stm32f10x_gpio.c
+        Lib/src/stm32f10x_i2c.c
+        Lib/src/stm32f10x_iwdg.c
+        Lib/src/stm32f10x_pwr.c
+        Lib/src/stm32f10x_rcc.c
+        Lib/src/stm32f10x_rtc.c
+        Lib/src/stm32f10x_sdio.c
+        Lib/src/stm32f10x_spi.c
+        Lib/src/stm32f10x_tim.c
+        Lib/src/stm32f10x_usart.c
+        Lib/src/stm32f10x_wwdg.c
+        User/main.c
+        User/stm32f10x_conf.h
+        User/stm32f10x_it.c
+        User/stm32f10x_it.h)

@@ -1,0 +1,40 @@
+.record{
+  background-color: #eee;
+
+  display: flex;
+  justify-content: space-between;
+
+  height: 60px;
+  line-height: 60px;
+  padding: 10px;
+
+  border-bottom: 1px solid #66cccc;
+  border-top: 1px solid #66cccc;
+  border-radius: 40px;
+  border-collapse: collapse; 
+}
+
+.record .account{
+  float: left;
+}
+
+.record .value{
+  color: #66cccc;
+  padding: 10px;
+  line-height: 40px;
+  font-size: 30px;
+  float: left;
+}
+
+.record .time{
+  font-size: 12px;
+  float: left;
+  padding: 10px;
+  line-height: 40px;
+}
+
+.record .payMethods{
+  float: right;
+  font-size: 15px;
+  color: #66cccc;
+}

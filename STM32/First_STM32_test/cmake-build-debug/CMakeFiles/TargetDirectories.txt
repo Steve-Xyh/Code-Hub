@@ -1,0 +1,3 @@
+/Users/apple/Desktop/TEST/Code-Hub/STM32/First_STM32_test/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/apple/Desktop/TEST/Code-Hub/STM32/First_STM32_test/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/apple/Desktop/TEST/Code-Hub/STM32/First_STM32_test/cmake-build-debug/CMakeFiles/First_STM32_test.dir

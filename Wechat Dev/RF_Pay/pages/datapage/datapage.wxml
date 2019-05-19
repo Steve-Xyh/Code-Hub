@@ -1,0 +1,8 @@
+<!--pages/datapage/datapage.wxml-->
+<view>数据</view>
+<text>pages/datapage/datapage.wxml</text>
+<text>\n\n\n\n</text>
+<import src="../../templates/payRecord/payRecord.wxml" />
+
+<template is='payRecord' wx:for="{{records}}" wx:key="id" data="{{...item}}">
+</template>

@@ -1,0 +1,39 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/library/library",
+    "pages/contactUS/contactUS"
+  ],
+
+  "window":{
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#3ca8ff",
+    "navigationBarTitleText": "摄影学会",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/library/library",
+        "text": "作品集",
+        "iconPath": "/images/icons/tabbar/tabbar1.png",
+        "selectedIconPath": "/images/icons/tabbar/tabbar1_selected.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "约拍",
+        "iconPath": "/images/icons/tabbar/tabbar2.png",
+        "selectedIconPath": "/images/icons/tabbar/tabbar2_selected.png"
+      },
+      {
+        "pagePath": "pages/contactUS/contactUS",
+        "text": "联系我们",
+        "iconPath": "/images/icons/tabbar/tabbar3.png",
+        "selectedIconPath": "/images/icons/tabbar/tabbar3_selected.png"
+      }
+    ]
+  }
+}
