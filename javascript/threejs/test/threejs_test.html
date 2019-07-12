@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<title>My first three.js app</title>
+		<style>
+			body { margin: 0; }
+			canvas { width: 100%; height: 100% }
+		</style>
+	</head>
+	<body>
+		<script src="js/three.js"></script>
+		<script>
+			// Our Javascript will go here.
+			//import * as THREE from 'three';
+			
+			var scene, camera, renderer;
+			var geometry, material, cube, mesh;
+
+			function init() {
+
+				scene = new THREE.Scene();
+				camera = new THREE.PerspectiveCamera( 100, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+				renderer = new THREE.WebGLRenderer();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				document.body.appendChild( renderer.domElement );
+				
+				geometry = new THREE.BoxGeometry( 3, 1, 3 );
+				material = new THREE.MeshBasicMaterial( { color: 0xccff11 } );
+
+				edgeGeo = new THREE.BoxGeometry(5, 2, 4);
+				edgeMat = new THREE.MeshBasicMaterial( {color: 0x000000} );
+				edgeCube = new THREE.	Mesh(edgeGeo, edgeMat);
+
+				cube = new THREE.Mesh( geometry, material );
+				edges = new THREE.EdgesHelper( cube, 0x000000 );	//set edges for cube
+				edgesOut = new THREE.EdgesHelper( edgeCube, 0xffffff );	//set outside edges
+
+				scene.add(cube);
+				scene.add(edges);
+				scene.add(edgesOut);
+
+				camera.position.z = 5;
+
+			}
+
+			function cubeMovX(movValue) {
+
+				cube.position.x += movValue;
+				edges.position.x += movValue;
+				edgesOut.position.x += movValue;
+
+			}
+
+			function cubeMovY(movValue) {
+
+				cube.position.y += movValue;
+				edges.position.y += movValue;
+				edgesOut.position.y += movValue;
+
+			}
+
+			function sleep(milliSeconds) {
+				var startTime = new Date().getTime();
+				while (new Date().getTime() < startTime + milliSeconds);
+			}
+
+			function animate() {
+				requestAnimationFrame( animate );
+
+				//Let the cube rotate.
+				cube.rotation.x += 0.005;
+				edges.rotation.x += 0.005;
+				edgesOut.rotation.x += 0.005;
+
+				cube.rotation.y += 0.005;
+				edges.rotation.y += 0.005;
+				edgesOut.rotation.y += 0.005;
+
+				cube.rotation.z += 0.005;
+				edges.rotation.z += 0.005;
+				edgesOut.rotation.z += 0.005;
+
+				var movValue = 0.5;
+				var sleepTime = 100;
+				
+
+				/*cubeMovX(movValue);
+				
+				sleep(sleepTime);
+				cubeMovY(movValue);
+				
+				sleep(sleepTime);
+				cubeMovX(-movValue);
+				sleep(sleepTime);
+				
+				cubeMovY(-movValue);
+				sleep(sleepTime);*/
+				
+				/*cube.position.x -= movValue;
+				edges.position.x -= movValue;
+				edgesOut.position.x -= movValue;
+
+				cube.position.y -= movValue;
+				edges.position.y -= movValue;
+				edgesOut.position.y -= movValue;*/
+
+				//camera.rotation.x += 0.005;
+
+
+				renderer.render( scene, camera );
+			}
+			
+			function threeStart() {
+				init();
+				animate();
+			}
+
+			threeStart();
+		</script>
+	</body>
+</html>

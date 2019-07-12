@@ -1,34 +1,69 @@
 {
   "classTime": [
     {
-        "name":"1-2",
+        "name":"1",
         "startTime":"0830",
+        "endTime":"0915"
+    },
+    {
+        "name":"2",
+        "startTime":"0925",
         "endTime":"1010"
     },
     {
-        "name":"3-4",
+        "name":"3",
         "startTime":"1030",
+        "endTime":"1115"
+    },
+    {
+        "name":"4",
+        "startTime":"1125",
         "endTime":"1210"
     },
     {
-        "name":"5-6",
+        "name":"5",
         "startTime":"1220",
-        "endTime":"1340"
+        "endTime":"1305"
     },
     {
-        "name":"7-8",
+        "name":"6",
+        "startTime":"1315",
+        "endTime":"1400"
+    },
+    {
+        "name":"7",
         "startTime":"1400",
+        "endTime":"1445"
+    },
+    {
+        "name":"8",
+        "startTime":"1455",
         "endTime":"1540"
     },
     {
-        "name":"9-10",
+        "name":"9",
         "startTime":"1600",
+        "endTime":"1645"
+    },
+    {
+        "name":"10",
+        "startTime":"1655",
         "endTime":"1740"
     },
     {
-        "name":"11-12",
+        "name":"11",
         "startTime":"1900",
+        "endTime":"1945"
+    },
+    {
+        "name":"12",
+        "startTime":"1955",
         "endTime":"2040"
+    },
+    {
+        "name":"13",
+        "startTime":"2050",
+        "endTime":"2135"
     }
   ]
 }

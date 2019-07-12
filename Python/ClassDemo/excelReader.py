@@ -13,9 +13,10 @@ _colOfClassName = 0
 _colOfStartWeek = 1
 _colOfEndWeek = 2
 _colOfWeekday = 3
-_colOfClassTime = 4
-_colOfClassroom = 5
-_colOfInterval = 6
+_colOfClassSTime = 5
+_colOfClassETime = 4
+_colOfClassroom = 6
+_colOfInterval = 7
 
 def main():
 	# 读取 excel 文件
@@ -35,25 +36,11 @@ def main():
 	startWeekList = []
 	endWeekList = []
 	weekdayList = []
-	classTimeList = []
+	classSTimeList = []
+	classETimeList = []
 	classroomList = []
 	intervalList = []
 
-	# 确定配置内容
-	info = "\n欢迎使用课程表生成工具·Excel 解析器。\n这是你 Excel 列信息配置，请检查。\n\n如若有误，请自行编辑 excelReader 文件第 12～17 行\n\n"
-	info += "ClassName: " + str(_colOfClassName) + "列\n"
-	info += "StartWeek: " + str(_colOfStartWeek) + "列\n"
-	info += "EndWeek: " + str(_colOfEndWeek) + "列\n"
-	info += "Weekday: " + str(_colOfWeekday) + "列\n"
-	info += "ClassTime: " + str(_colOfClassTime) + "列\n"
-	info += "Classroom: " + str(_colOfClassroom) + "列\n"
-	info += "Interval: " + str(_colOfInterval) + "列\n"
-	print (info)
-	# info += "输入 0 继续，输入 1 退出："
-	option = raw_input("输入 0 继续，输入其他内容退出：")
-	if option == "1":
-		sys.exit()
-	
 
 	# 开始操作
 	# 将信息加载到列表
@@ -65,7 +52,8 @@ def main():
 		startWeekList.append(str(int((table.cell(i, _colOfStartWeek).value))))
 		endWeekList.append(str(int((table.cell(i, _colOfEndWeek).value))))
 		weekdayList.append(str(int((table.cell(i, _colOfWeekday).value))))
-		classTimeList.append(str(int((table.cell(i, _colOfClassTime).value))))
+		classETimeList.append(str(int(table.cell(i, _colOfClassETime).value)))
+		classSTimeList.append(str(int((table.cell(i, _colOfClassSTime).value))))
 		classroomList.append(str(((table.cell(i, _colOfClassroom).value))))
 		intervalList.append(str(int((table.cell(i, _colOfInterval).value))))
 		
@@ -77,11 +65,12 @@ def main():
 	classInfoStr += headStr
 	for className in classNameList:
 		itemClassInfoStr = ""
-		itemClassInfoStr  = itemHeadStr + '"className":"' + className + '",'
+		itemClassInfoStr  = itemHeadStr + '"className":"' + className + '",\n'
 		itemClassInfoStr += '"week":{\n"startWeek":' + startWeekList[i] + ',\n'
 		itemClassInfoStr += '"endWeek":' + endWeekList[i] + '\n},\n'
 		itemClassInfoStr += '"weekday":' + weekdayList[i] + ',\n'
-		itemClassInfoStr += '"classTime":' + classTimeList[i] + ',\n'
+		itemClassInfoStr += '"classSTART":' + classSTimeList[i] + ',\n'
+		itemClassInfoStr += '"classEND":' + classETimeList[i] + ',\n'
 		itemClassInfoStr += '"classroom":"' + classroomList[i] + '",\n'
 		itemClassInfoStr += '"interval":' + intervalList[i] + '\n'
 		itemClassInfoStr += itemTailStr
@@ -97,6 +86,6 @@ def main():
 		f.close()
 	print("\nALL DONE !")
 
-reload(sys);
-sys.setdefaultencoding('utf-8');
+#reload(sys);
+#sys.setdefaultencoding('utf-8');
 main()

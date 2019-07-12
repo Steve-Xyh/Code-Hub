@@ -7,7 +7,7 @@ import imp
 import time, datetime
 import json
 from random import Random
-
+import os
 
 __author__ = 'ChanJH'
 __site__ = 'chanjh.com'
@@ -69,12 +69,13 @@ def icsCreateAndSave():
 	global classTimeList, DONE_ALARMUID, DONE_UnitUID
 	eventString = ""
 	for classInfo in classInfoList :
-		i = int(classInfo["classTime"]-1)
+		i = int(classInfo["classSTART"]-1)
+		j = int(classInfo["classEND"]-1)
 		className = classInfo["className"]
 		classroom = classInfo["classroom"]
 		'''+"|"+classTimeList[i]["name"]+"|"+classInfo["classroom"]'''
 		
-		endTime = classTimeList[i]["endTime"]
+		endTime = classTimeList[j]["endTime"]
 		startTime = classTimeList[i]["startTime"]
 		index = 0
 		for date in classInfo["date"]:
@@ -243,6 +244,7 @@ def basicSetting():
 	
 	info = "请设置第一周的星期一日期(如：20160905):\n"
 	firstWeekDate = input(info)
+	firstWeekDate = str(firstWeekDate)
 	#raw_input(info)
 	checkInput(checkFirstWeekDate, firstWeekDate)
 	
@@ -305,4 +307,5 @@ def sys_exit():
 #reload(sys);
 imp.reload(sys)
 #sys.setdefaultencoding('utf-8');
+os.system("python3 excelReader.py")
 main()
