@@ -1,0 +1,122 @@
+ARM GAS  /var/folders/br/2wtqgb695v5djmfg7vx_4m7h0000gn/T//cc0vRVBk.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"dma.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.MX_DMA_Init,"ax",%progbits
+  20              		.align	2
+  21              		.global	MX_DMA_Init
+  22              		.thumb
+  23              		.thumb_func
+  25              	MX_DMA_Init:
+  26              	.LFB64:
+  27              		.file 1 "Src/dma.c"
+   1:Src/dma.c     **** /**
+   2:Src/dma.c     ****   ******************************************************************************
+   3:Src/dma.c     ****   * File Name          : dma.c
+   4:Src/dma.c     ****   * Description        : This file provides code for the configuration
+   5:Src/dma.c     ****   *                      of all the requested memory to memory DMA transfers.
+   6:Src/dma.c     ****   ******************************************************************************
+   7:Src/dma.c     ****   * @attention
+   8:Src/dma.c     ****   *
+   9:Src/dma.c     ****   * <h2><center>&copy; Copyright (c) 2019 STMicroelectronics.
+  10:Src/dma.c     ****   * All rights reserved.</center></h2>
+  11:Src/dma.c     ****   *
+  12:Src/dma.c     ****   * This software component is licensed by ST under BSD 3-Clause license,
+  13:Src/dma.c     ****   * the "License"; You may not use this file except in compliance with the
+  14:Src/dma.c     ****   * License. You may obtain a copy of the License at:
+  15:Src/dma.c     ****   *                        opensource.org/licenses/BSD-3-Clause
+  16:Src/dma.c     ****   *
+  17:Src/dma.c     ****   ******************************************************************************
+  18:Src/dma.c     ****   */
+  19:Src/dma.c     **** /* Includes ------------------------------------------------------------------*/
+  20:Src/dma.c     **** #include "dma.h"
+  21:Src/dma.c     **** 
+  22:Src/dma.c     **** /* USER CODE BEGIN 0 */
+  23:Src/dma.c     **** 
+  24:Src/dma.c     **** /* USER CODE END 0 */
+  25:Src/dma.c     **** 
+  26:Src/dma.c     **** /*----------------------------------------------------------------------------*/
+  27:Src/dma.c     **** /* Configure DMA                                                              */
+  28:Src/dma.c     **** /*----------------------------------------------------------------------------*/
+  29:Src/dma.c     **** 
+  30:Src/dma.c     **** /* USER CODE BEGIN 1 */
+  31:Src/dma.c     **** 
+ARM GAS  /var/folders/br/2wtqgb695v5djmfg7vx_4m7h0000gn/T//cc0vRVBk.s 			page 2
+
+
+  32:Src/dma.c     **** /* USER CODE END 1 */
+  33:Src/dma.c     **** 
+  34:Src/dma.c     **** /** 
+  35:Src/dma.c     ****   * Enable DMA controller clock
+  36:Src/dma.c     ****   */
+  37:Src/dma.c     **** void MX_DMA_Init(void) 
+  38:Src/dma.c     **** {
+  28              		.loc 1 38 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 8
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  33 0000 82B0     		sub	sp, sp, #8
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 8
+  36              	.LBB2:
+  39:Src/dma.c     ****   /* DMA controller clock enable */
+  40:Src/dma.c     ****   __HAL_RCC_DMA1_CLK_ENABLE();
+  37              		.loc 1 40 0
+  38 0002 064B     		ldr	r3, .L3
+  39 0004 5A69     		ldr	r2, [r3, #20]
+  40 0006 42F00102 		orr	r2, r2, #1
+  41 000a 5A61     		str	r2, [r3, #20]
+  42 000c 5B69     		ldr	r3, [r3, #20]
+  43 000e 03F00103 		and	r3, r3, #1
+  44 0012 0193     		str	r3, [sp, #4]
+  45 0014 019B     		ldr	r3, [sp, #4]
+  46              	.LBE2:
+  41:Src/dma.c     **** 
+  42:Src/dma.c     **** }
+  47              		.loc 1 42 0
+  48 0016 02B0     		add	sp, sp, #8
+  49              	.LCFI1:
+  50              		.cfi_def_cfa_offset 0
+  51              		@ sp needed
+  52 0018 7047     		bx	lr
+  53              	.L4:
+  54 001a 00BF     		.align	2
+  55              	.L3:
+  56 001c 00100240 		.word	1073876992
+  57              		.cfi_endproc
+  58              	.LFE64:
+  60              		.text
+  61              	.Letext0:
+  62              		.file 2 "/Users/apple/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h"
+  63              		.file 3 "/Users/apple/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h"
+  64              		.file 4 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
+  65              		.file 5 "Drivers/CMSIS/Include/core_cm3.h"
+ARM GAS  /var/folders/br/2wtqgb695v5djmfg7vx_4m7h0000gn/T//cc0vRVBk.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 dma.c
+/var/folders/br/2wtqgb695v5djmfg7vx_4m7h0000gn/T//cc0vRVBk.s:20     .text.MX_DMA_Init:0000000000000000 $t
+/var/folders/br/2wtqgb695v5djmfg7vx_4m7h0000gn/T//cc0vRVBk.s:25     .text.MX_DMA_Init:0000000000000000 MX_DMA_Init
+/var/folders/br/2wtqgb695v5djmfg7vx_4m7h0000gn/T//cc0vRVBk.s:56     .text.MX_DMA_Init:000000000000001c $d
+                     .debug_frame:0000000000000010 $d
+
+NO UNDEFINED SYMBOLS
