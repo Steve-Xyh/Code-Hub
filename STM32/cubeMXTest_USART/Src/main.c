@@ -155,20 +155,21 @@ int main(void)
     a++;*/
 
     //发送字符串
-    /*HAL_UART_Transmit(&huart1, tData1, sizeof(tData1), 1000);
+    HAL_UART_Transmit(&huart1, tData1, sizeof(tData1), 1000);
     while(HAL_UART_GetState(&huart1) == HAL_UART_STATE_BUSY_TX);
     HAL_UART_Transmit(&huart1, tData2, sizeof(tData2), 1000);
     while(HAL_UART_GetState(&huart1) == HAL_UART_STATE_BUSY_TX);
     //printf("Printf1\n\r");
-    //printf("Printf2\n\r");*/
+    //printf("Printf2\n\r");
 
+    /*
     //接收字符串,并原文发送
     HAL_UART_Receive(&huart1, rData, sizeof(rData), 1000);
     while(HAL_UART_GetState(&huart1) == HAL_UART_STATE_BUSY_RX);
     HAL_UART_Transmit(&huart1, rData, sizeof(rData), 1000);
     while(HAL_UART_GetState(&huart1) == HAL_UART_STATE_BUSY_TX);
     HAL_Delay(500);
-    memset(rData,0,sizeof(rData));
+    memset(rData,0,sizeof(rData));*/
   }
   /* USER CODE END 3 */
 }
