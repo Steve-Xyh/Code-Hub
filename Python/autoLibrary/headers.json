@@ -1,0 +1,29 @@
+'Accept' : 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+'Accept-Encoding' : 'gzip, deflate, br',
+'Accept-Language' : 'zh-CN,zh;q=0.9',
+'Cache-Control' : 'max-age=0',
+'Connection' : 'keep-alive',
+'Content-Length' : '134',
+'Content-Type' : 'application/x-www-form-urlencoded',
+'Cookie' : 'JSESSIONID=54D0FD2F7B7282EE53BA58801FC53CA6.app_cas_2; sessoinMapKey=0cfdef771c324195bb54ccb50f67c6bf',
+'Host' : 'uis.nwpu.edu.cn',
+'Origin' : 'https://uis.nwpu.edu.cn',
+'Referer' : 'https://uis.nwpu.edu.cn/cas/login?service=http://202.117.88.170/loginall.aspx',
+'Sec-Fetch-Mode' : 'navigate',
+'Sec-Fetch-Site' : 'same-origin',
+'Sec-Fetch-User' : '?1',
+'Upgrade-Insecure-Requests' : '1',
+'User-Agent' : 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36',
+
+
+
+//reservation
+"Accept" : "application/json, text/javascript, */*; q=0.01"
+"Accept-Encoding": "gzip, deflate"
+"Accept-Language": "zh-CN,zh;q=0.9"
+"Connection": "keep-alive"
+"Cookie": "ASP.NET_SessionId=hkywkv4h1oxo0wty3u3psbdq"
+"Host": "202.117.88.170"
+"Referer": "http://202.117.88.170/ClientWeb/xcus/ic2/Default.aspx"
+"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36"
+"X-Requested-With": "XMLHttpRequest"

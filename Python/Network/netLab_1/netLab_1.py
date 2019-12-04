@@ -22,7 +22,7 @@ class myThread (threading.Thread):
         #自定义数据
         self.sendCounter = 0
         self.collisionCounter = 0
-        self.collisionWindow = 0.00000512
+        self.collisionWindow = 0.0000000512
         self.randNum = random.randint(0,2)
 
 
@@ -32,7 +32,7 @@ class myThread (threading.Thread):
         # print_time(self.name, self.counter, 5)
 
         while self.sendCounter < maxSend:
-
+            sleep(0)
             if Bus == 0:
                 Bus |= self.threadID
                 sleep(0.001)
@@ -65,10 +65,14 @@ class myThread (threading.Thread):
 # 创建新线程
 thread1 = myThread(1, "Host-A")
 thread2 = myThread(2, "Host-B")
+thread3 = myThread(3, "Host-C")
 
 # 开启新线程
 thread1.start()
 thread2.start()
+thread3.start()
+
 thread1.join()
 thread2.join()
+thread3.join()
 print ("退出主线程")
